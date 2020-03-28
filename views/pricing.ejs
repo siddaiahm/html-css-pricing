@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Page</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <link href="httlables://fonts.google.com/specimen/Montserrat" rel="stylesheet" />
+</head>
+
+<body>
+    <main>
+        <div class="lead">
+            <h1>Our Pricing</h1>
+            <div class="switch-lable">
+                <lable>Annually</lable>
+                <label class="switch">
+                    <input type="checkbox" id="change" onclick="check()" checked>
+                    <span class="slider round"></span>
+                </label>
+                <lable>Monthly</lable>
+            </div>
+        </div>
+        <div class="basic">
+            <h3>Basic</h3>
+            <p class="price"><small>$</small>19<l class="extra">9</l>.99</p>
+            <p class="sub-lables">500 GB Storage</p>
+            <p class="sub-lables middle">2 Users Allowed</p>
+            <p class="sub-lables last">Send up to 3 GB</p>
+            <a class="btn" id="btn1" href="info.html">LEARN MORE</a>
+        </div>
+        <div class="professional">
+            <h3>Professional</h3>
+            <p class="price"><small>$</small>24<l class="extra">9</l>.99</p>
+            <p class="sub-lables">1 TB Storage</p>
+            <p class="sub-lables middle">5 Users Allowed</p>
+            <p class="sub-lables last">Send up to 10 GB</p>
+            <a class="btn" id="btn2" href="info.html">LEARN MORE</a>
+        </div>
+        <div class="master">
+            <h3>Master</h3>
+            <p class="price"><small>$</small>39<l class="extra">9</l>.99</p>
+            <p class="sub-lables">2 TB Storage</p>
+            <p class="sub-lables middle">10 Users Allowed</p>
+            <p class="sub-lables last">Send up to 20 GB</p>
+            <a class="btn" id="btn3" href="info.html">LEARN MORE</a>
+        </div>
+    </main>
+    <script>
+        function check() {
+            let checkChange = document.getElementById('change').checked;
+            let arrIds = document.getElementsByClassName("extra");
+            document.getElementById('btn1').className += " btn-alt1";
+            document.getElementById('btn2').className += " btn-alt2";
+            document.getElementById('btn3').className += " btn-alt1";
+            if (checkChange) {
+                arrIds[0].style.display = "none";
+                arrIds[1].style.display = "none";
+                arrIds[2].style.display = "none";
+            } else {
+                arrIds[0].style.display = "inline-block";
+                arrIds[1].style.display = "inline-block";
+                arrIds[2].style.display = "inline-block";
+            }
+        }
+    </script>
+</body>
+
+</html>
