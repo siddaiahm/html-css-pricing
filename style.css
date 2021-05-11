@@ -1,17 +1,15 @@
 *,
 *:before,
-*:after{
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-main{
-  background-image: url('images/bg-bottom.svg'),url('images/bg-top.svg');
-  background-repeat: no-repeat,no-repeat;
-  background-position: left bottom,right top;
-  margin: 100px 200px;
-  padding: 50px 200px;
+main {
+  background-image: url("images/bg-bottom.svg"), url("images/bg-top.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left bottom, right top;
 }
 
 /* 
@@ -20,15 +18,19 @@ main{
 =====================================
  */
 body {
-    font-size: 16px;
-    font: 700 16px / 18px "Montserrat";
-    background-color: hsl(240, 80%, 98%);
+  font-size: 16px;
+  font: 700 16px / 18px "Montserrat";
+  background-color: hsl(240, 80%, 98%);
+  min-height: 98vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 h1 {
-    color:  hsl(233, 13%, 49%);
+  color: hsl(233, 13%, 49%);
 }
 .lead {
-    color: hsl(234, 14%, 74%);
+  color: hsl(234, 14%, 74%);
 }
 h3 {
   font-size: 24px;
@@ -40,7 +42,6 @@ h3 {
   font-size: 60px;
   margin-top: 45px;
   margin-bottom: 50px;
-  
 }
 .sub-lables {
   border-top: 1px solid hsl(236, 72%, 90%);
@@ -66,9 +67,9 @@ h3 {
 =====================================
  */
 .basic {
-background-color: hsl(0, 100%, 100%);
-border-radius: 10px;
-box-shadow: 0px 7px hsl(236, 72%, 92%);
+  background-color: hsl(0, 100%, 100%);
+  border-radius: 10px;
+  box-shadow: 0px 7px hsl(236, 72%, 92%);
 }
 .professional {
   color: hsl(240, 78%, 98%);
@@ -81,221 +82,216 @@ box-shadow: 0px 7px hsl(236, 72%, 92%);
   border-radius: 10px;
   box-shadow: 0px 7px hsl(236, 72%, 92%);
   background-color: hsl(0, 100%, 100%);
-  
 }
 /* 
 =====================================
     grid
 =====================================
  */
-  main {
-    display: grid;
-    grid-template-rows: 1fr 2fr;
-    grid-template-columns: 3;
-    grid-template-areas: 
+main {
+  display: grid;
+  min-width: 40%;
+  grid-template-areas:
     ". lead ."
-    "basic prof master"
-    ;
-    row-gap: 20px;
-  }
-  .lead{
-    grid-area: lead;
-    justify-self: center;
-    text-align: center;
-    padding: 50px;
-  }
-  .basic {
-    grid-area: basic;
-    padding: 50px;
-    display: grid;
-    text-align: center;
-    justify-content: center;
-    justify-content: stretch;
-  }
-    .professional {
-      text-align: center;
-      grid-area: prof;
-      padding: 55px;
-      display: grid;
-      justify-content: center;
-      justify-content: stretch;
-    }
-    .master {
-      text-align: center;
-      grid-area: master;
-      padding: 50px;
-      display: grid;
-      justify-content: center;
-      justify-content: stretch;
-    }
-    .btn {
-      text-decoration: none;
-      outline: 0;
-      border-radius: 10px;
-      border: 2px solid hsl(234, 14%, 74%);
-      background-color: inherit;
-      text-align: center;
-      color: inherit;
-      padding: 15px 20px;
-    }
-    .btn-alt1 {
-      background-color: hsl(237, 63%, 64%);
-      color: hsl(0, 100%, 100%);
-    }
-    .btn-alt2 {
-      background-color: hsl(0, 100%, 100%);
-      color: hsl(237, 63%, 64%);
-    }
+    "basic prof master";
+  row-gap: 20px;
+}
+.lead {
+  grid-area: lead;
+  justify-self: center;
+  text-align: center;
+  padding: 50px;
+}
+.basic {
+  grid-area: basic;
+  padding: 50px;
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  justify-content: stretch;
+}
+.professional {
+  text-align: center;
+  grid-area: prof;
+  padding: 45px;
+  display: grid;
+  justify-content: center;
+  justify-content: stretch;
+}
+.master {
+  text-align: center;
+  grid-area: master;
+  padding: 50px;
+  display: grid;
+  justify-content: center;
+  justify-content: stretch;
+}
+.btn {
+  text-decoration: none;
+  outline: 0;
+  border-radius: 10px;
+  border: 2px solid hsl(234, 14%, 74%);
+  background-color: inherit;
+  text-align: center;
+  color: inherit;
+  padding: 15px 20px;
+}
+.btn-alt1 {
+  background-color: hsl(237, 63%, 64%);
+  color: hsl(0, 100%, 100%);
+}
+.btn-alt2 {
+  background-color: hsl(0, 100%, 100%);
+  color: hsl(237, 63%, 64%);
+}
 /* 
 =====================================
     switch button
 =====================================
  */
 .switch-lable {
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 }
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    margin: 20px;
-  }
-  
-  .switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: hsl(237, 63%, 64%);
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: hsl(240, 78%, 98%);
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  input:checked + .slider {
-    background-color: hsl(234, 14%, 74%);
-  }
-  
-  input:focus + .slider {
-    background-color: hsl(237, 63%, 64%);
-    box-shadow: 0 0 1px hsl(237, 63%, 64%);
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 20px;
+}
 
-  /* 
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(237, 63%, 64%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: hsl(240, 78%, 98%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-color: hsl(234, 14%, 74%);
+}
+
+input:focus + .slider {
+  background-color: hsl(237, 63%, 64%);
+  box-shadow: 0 0 1px hsl(237, 63%, 64%);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* 
 =====================================
     multiple device
 =====================================
  */
 
- @media only screen and (min-width:851px) and (max-width:1500px) {
-   main {
-     margin: 10px;
-     padding: 10px;
-   }
- }
- @media only screen and (max-width:700px) {
+@media only screen and (min-width: 851px) and (max-width: 1500px) {
   main {
-    margin: 5%;
-     padding: 0px;
-    display: grid;
-    grid-template-rows: 4;
-    grid-template-columns: 100%;
-    grid-template-areas: 
-    "lead"
-    "basic"
-    "prof" 
-    "master"
-    ;
-    justify-content: center;
-    align-items: center;
-    row-gap: 50px;
-  }
-  .lead{
-    grid-area: lead;
-    padding-bottom: 0px;
-  }
-  .basic{
-    grid-area: basic;
-    padding: 20px;
-  }
-
-  .professional{
-    grid-area: prof;
-    transform: none;
-    padding: 20px;
-  }
-  .master{
-    grid-area: master;
-    padding: 20px;
+    margin: 10px;
+    padding: 10px;
   }
 }
-@media only screen and (min-width:701px) and (max-width:1000px) {
+@media only screen and (max-width: 700px) {
   main {
     margin: 5%;
     padding: 0px;
     display: grid;
     grid-template-rows: 4;
-    grid-template-columns: 80%;
-    grid-template-areas: 
-    "lead"
-    "basic"
-    "prof" 
-    "master"
-    ;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "lead"
+      "basic"
+      "prof"
+      "master";
     justify-content: center;
     align-items: center;
     row-gap: 50px;
   }
-  .lead{
+  .lead {
     grid-area: lead;
     padding-bottom: 0px;
   }
-  .basic{
+  .basic {
     grid-area: basic;
     padding: 20px;
   }
 
-  .professional{
+  .professional {
     grid-area: prof;
     transform: none;
     padding: 20px;
   }
-  .master{
+  .master {
+    grid-area: master;
+    padding: 20px;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1000px) {
+  main {
+    margin: 5%;
+    padding: 0px;
+    display: grid;
+    grid-template-rows: 4;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "lead"
+      "basic"
+      "prof"
+      "master";
+    justify-content: center;
+    align-items: center;
+    row-gap: 50px;
+  }
+  .lead {
+    grid-area: lead;
+    padding-bottom: 0px;
+  }
+  .basic {
+    grid-area: basic;
+    padding: 20px;
+  }
+
+  .professional {
+    grid-area: prof;
+    transform: none;
+    padding: 20px;
+  }
+  .master {
     grid-area: master;
     padding: 20px;
   }
